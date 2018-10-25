@@ -5,9 +5,13 @@
 }
 
 body {
-  background: #424242;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+/* background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%); */
 }
-
+.wrapper{
+  margin-top: 12em;
+}
 form {
   width: 320px;
   margin: 45px auto;
@@ -43,7 +47,12 @@ form .emoji {
 textarea {
   resize: none;
 }
-
+::placeholder {
+  color: rgba(234, 223, 123, 0.5);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  opacity: 1; /* Firefox */
+}
 input,
 textarea {
   background: none;

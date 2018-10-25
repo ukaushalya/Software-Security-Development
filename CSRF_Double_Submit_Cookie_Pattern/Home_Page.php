@@ -24,6 +24,7 @@ if (!isset ($_SESSION['LoginState'])){
   <body onload="_tokenRequest('<?php echo $_COOKIE['Session'];?>')">
   <div class="wrapper">
     <form name="loginForm" action="Validate_Token.php"  method="post">
+      <label style="margin-left: -25%; margin-right: auto; width: 100%;">Bill Payment Gateway</label>
       <input type="text" required="required" class="input-group mb-3" name="invoiceNo" placeholder="Invoice No :">
       <br>
       <input type="text" required="required" name="accountNo" placeholder="Account Number :">

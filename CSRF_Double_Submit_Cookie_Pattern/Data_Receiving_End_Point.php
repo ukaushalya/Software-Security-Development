@@ -27,11 +27,72 @@ if(isset($_COOKIE["Details"])){
     <link rel="stylesheet" href="./css/style.css">
     <title>Data End-Point</title>
   </head>
+  <style>
+    .wrapper {
+        margin-top: 12em;
+        width:100%;
+    }
+    .std{
+      -webkit-box-shadow: 7px 6px 13px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 6px 13px -1px rgba(0,0,0,0.75);
+box-shadow: 7px 6px 13px -1px rgba(0,0,0,0.75);
+background-color: rgba(255,255,255,0.3);
+border-radius:8px; 
+width: 40%;
+font-size:30px;
+padding:10px;
+color:white;
+    }
+    .rcol{
+      text-align:right;
+      width:55%;
+      padding-right:8px;
+    }
+    .sp{
+      padding:10px;
+      /* border-bottom:black solid 1px; */
+      text-align:center;
+      color:darkgray;
+    }
+</style>
 
-  <body>
-    <label><?php echo $_SESSION['status']; ?></label>
-    <label><br>Invoice No : <?php echo $invoiceNo ?></label>
-    <label><br><br>Account Number : <?php echo $accountNo ?></label>
-    <label><br><br><br>Bill Amount : <?php echo $billAmount ?></label>
-  </body>
+<body>
+
+    <div class="wrapper">
+        <table style="width: 100%; margin-left: auto; margin-right: auto;" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td class="std">
+                        <table style="margin-left: auto; margin-right: auto; width: 100%;" border="0" cellspacing="0" cellpadding="0">
+                            <tbody >
+                              <tr>
+                                <td class="sp" colspan="3"><?php echo $_SESSION['status']; ?></td>
+                              </tr>
+                              <tr>
+                                <td colspan="3"><hr/></td>
+                              </tr>
+                                <tr>
+                                    <td class="rcol">Invoice No : </td>
+                                    <td><?php echo $invoiceNo ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="rcol">Account Number : </td>
+                                    <td><?php echo $accountNo ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="rcol">Bill Amount :</td>
+                                    <td><?php echo $billAmount ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+</body>
 </html>
